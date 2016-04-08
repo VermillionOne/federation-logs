@@ -12,11 +12,9 @@ adjective_1 = raw_input('A one word description of something  =>  ');
 
 temperature = (int(number_1) + int(number_2) * int(minutes)) * 10
 
-print temperature
-
 story = '''
 
-{name_part_1} {name_part_1} Casserole -
+{adjective_1} {noun_1} Casserole -
 
 Here is a list of ingredients for the recipe:
 
@@ -32,3 +30,6 @@ Remove when browned and let sit for 10 minutes.
 Enjoy!
 
 '''
+
+story = story.format(**locals())
+print story
