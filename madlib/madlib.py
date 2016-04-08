@@ -1,4 +1,10 @@
 
+ingredients = ['Turnips', 'Rigatoni', 'Mushrooms', 'Eggs', 'Salt', 'Pepper', 'Hotsauce']
+
+number_1 = raw_input('Your favorite number  =>  ')
+number_2 = raw_input('The worst number  =>  ')
+minutes = raw_input('Pick a cool number between 7 and 15  =>  ')
+
 
 
 story = '''
@@ -14,8 +20,8 @@ Whip {number_2} in a bowl and {verb_1}, add the {noun_1}, and mix until the ingr
 
 Set the oven to {temperature} and let bake for {minutes} minutes.
 
-Remove when brown and let sit for 10 minutes.
+Remove when browned and let sit for 10 minutes.
 
-
+Enjoy!
 
 '''
