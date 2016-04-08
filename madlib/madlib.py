@@ -3,7 +3,7 @@
 
 story = '''
 
-
+{name_part_1} {name_part_1}
 
 Here is a list of ingredients for the recipe:
 
