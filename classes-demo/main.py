@@ -21,13 +21,17 @@ class MainHandler(webapp2.RequestHandler):
         about_button = Button()
         about_button.click()
         about_button.label = "About Us"
+        about_button.show_label()
         contact_button = Button()
         contact_button.label = "Contact Us"
+        contact_button.show_label()
 
 class Button(object):
     def __init__(self):
         print "constructor method of button ran"
-        self.label = ""
+        self.label = "" # public attribute
+        self.__size = 60 # private attribute - two underscores
+        self._color = "0x00000" # Protected attribute - one underscore
         self.on_roll_over("Hello!")
 
     def click(self):
