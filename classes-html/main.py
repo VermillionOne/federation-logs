@@ -1,6 +1,7 @@
 
 import webapp2
 from index import Page
+
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         p = Page()
