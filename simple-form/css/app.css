@@ -37,6 +37,7 @@
  	margin: 0;
  	padding: 0;
  	border: 0;
+  box-sizing: border-box; /* added */
  	font-size: 100%;
  	font: inherit;
  	vertical-align: baseline;
@@ -44,7 +45,9 @@
  /* HTML5 display-role reset for older browsers */
  article, aside, details, figcaption, figure,
  footer, header, hgroup, menu, nav, section {
+  box-sizing: border-box; /* added */
  	display: block;
+  font-size: 16px;
  }
  body {
  	line-height: 1;
@@ -75,6 +78,7 @@ body {
   background-size: cover;
   background-position: center;
   font-family: Cabin;
+  font-size: 16px;
 }
 
 /**
@@ -99,7 +103,7 @@ body {
 .logo {
   height: 42px;
 }
-.login {
+.login, .user {
   color: #f0f0f0;
   float: right;
   font-size: 20px;
@@ -115,7 +119,7 @@ body {
 }
 .form-section h1 {
   background: rgba(0,0,0,.5);
-  font-size: 24px;
+  font-size: 2.5em;
   font-weight: 700;
   margin: 10px 0;
   border-radius: 5px;
@@ -179,5 +183,41 @@ input.submit-button {
   margin: 20px 0 0;
 }
 .tracking-section {
-
+  position: relative;
+  width: calc(100% - 80px);
+  margin: 100px auto 0;
+  color: #fff;
+}
+.tracking-section header, .tracking-body {
+  background: rgba(0,0,0,.5);
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin: 0 0 20px;
+  padding: 20px;
+  width: 100%;
+}
+.tracking-section header h2{
+  font-size: 2em;
+  display: inline-block;
+}
+.tracking-section header p{
+  float: right;
+  text-align: right;
+  margin: 7px 0 0;
+}
+.tracking-body article {
+  padding: 20px;
+  text-transform: capitalize;
+  background: rgba(0,0,0, 0.15);
+  display: inline-block;
+  min-width: 250px;
+  border-radius: 3px;
+}
+.tracking-body article h3 {
+  font-size: 1.5em;
+  margin: 0 0 10px;
+}
+.tracking-body article p {
+  font-size: 1.125em;
+  margin: 0 0 5px 10px;
 }

@@ -20,7 +20,7 @@
       </div> -->
 
       <div class="user">
-        {self.username}
+        {self.username} <i class="fa fa-user"></i>
       </div>
 
     </header>
@@ -53,18 +53,22 @@
 
     <section class="tracking-section">
 
-      <header class="tracking-header">
+      <header>
         <h2>Hikr Tracking</h2>
         <p>
           {self.email}
         </p>
       </header>
 
-      <h3 class="trail-title">Trail Name: {self.trail-name}</h3>
-      <p class="trail-info">Difficulty: {self.difficulty}</p>
-      <p class="trail-info">Miles: {self.miles-hiked}</p>
-      <p class="trail-info">Time: {self.time-hiked}</p>
-      <p class="trail-info">Rating: {self.rating}</p>
+      <div class="tracking-body">
+        <article>
+          <h3 >{self.trail-name}</h3>
+          <p>Difficulty: {self.difficulty}</p>
+          <p>Miles: {self.miles-hiked}</p>
+          <p>Time: {self.time-hiked}</p>
+          <p>Rating: {self.rating}</p>
+        </article>
+      </div>
 
     </section>
 
