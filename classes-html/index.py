@@ -18,7 +18,6 @@ class Page(object):
         self.close = """
     </body>
 </html>
-
         """
 
     def print_out(self):
