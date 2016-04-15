@@ -1,32 +1,48 @@
-#!/usr/bin/env python
-#
-# Copyright 2007 Google Inc.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
-
 '''
 Timothy Castillo
-April 9, 2016
+April 14, 2016
 DWP 1604
-Install Google App Engine
+Simple form
 '''
 
 import webapp2 # Use the webapp2 library
-
+from page_sections import Section
 class MainHandler(webapp2.RequestHandler): # declaring a class
     def get(self): # function that gets everything: Catalyst
-        self.response.write('Hello world!')
+        page_head = '''<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        '''
+        page_body = '''
+        <h1>Hello, World!</h1>
+
+        <form method="GET">
+            <label for="username">Username: </label>
+            <input type="text" id="username" name="username"/>
+            <label for="email" >Email: </label>
+            <input type="text" id="email" name="email"/>
+            <input type="submit" value="Submit">
+        </form>
+        '''
+        page_close = '''
+    </body>
+</html>
+        '''
+        # self.request.GET
+        if self.request.GET:
+            # Stores the input data into respective variables
+            username = self.request.GET['username']
+            print self.request.GET['username']
+            email = self.request.GET['email']
+            print self.request.GET['email']
+            self.response.write(page_head + username +  " "  + email + page_body + page_close) # Printing onto the page
+        else:
+
+            self.response.write(page_head + page_body + page_close) # Printing onto the page
         # code goes here
 
     def additional_functions(self):
