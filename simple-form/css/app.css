@@ -109,7 +109,7 @@ body {
   font-size: 20px;
   margin: 7px 0 0;
 }
-.form-section, {
+.form-section {
   color: #fff;
   margin: 100px auto;
   max-width: 600px;
@@ -118,7 +118,7 @@ body {
   width: 50%;
 }
 .form-section h1 {
-  background: rgba(0,0,0,.5);
+  background: rgba(0,0,0,.75);
   font-size: 2.5em;
   font-weight: 700;
   margin: 10px 0;
@@ -126,7 +126,7 @@ body {
   padding: 20px;
 }
 .form-section form {
-  background: rgba(0,0,0,.5);
+  background: rgba(0,0,0,.75);
   border-radius: 5px;
   padding: 20px;
   position: relative;
@@ -182,25 +182,25 @@ input.submit-button {
   width: initial;
   margin: 20px 0 0;
 }
-.tracking-section {
+section.tracking_section {
   position: relative;
   width: calc(100% - 80px);
   margin: 100px auto 0;
   color: #fff;
 }
-.tracking-section header, .tracking-body {
-  background: rgba(0,0,0,.5);
+section.tracking_section header, .tracking-body {
+  background: rgba(0,0,0,.75);
   border-radius: 5px;
   box-sizing: border-box;
   margin: 0 0 20px;
   padding: 20px;
   width: 100%;
 }
-.tracking-section header h2{
+section.tracking_section header h2{
   font-size: 2em;
   display: inline-block;
 }
-.tracking-section header p{
+section.tracking_section header p{
   float: right;
   text-align: right;
   margin: 7px 0 0;
@@ -208,7 +208,7 @@ input.submit-button {
 .tracking-body article {
   padding: 20px;
   text-transform: capitalize;
-  background: rgba(0,0,0, 0.15);
+  background: rgba(0,0,0, 0.5);
   display: inline-block;
   min-width: 250px;
   border-radius: 3px;

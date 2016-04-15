@@ -2,8 +2,7 @@ class Page(object):
     def __init__(self):
         self.title = "Welcome!"
         self.css = "css/app.css"
-        self.head = """
-<!DOCTYPE html>
+        self.head = """<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
