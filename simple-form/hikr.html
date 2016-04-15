@@ -15,16 +15,17 @@
   <div class="container">
     <header class="main-header">
       <img src="img/hikr-logo.png" class="logo" alt="Hikr Logo" />
-      <div class="login">
-        <i class="fa fa-"></i>
-      </div>
-<!--
-      <div class="user">
-        {self.username}
+      <!-- <div class="login">
+        <i class="fa fa-sign-in" aria-hidden="true"></i>
       </div> -->
 
+      <div class="user">
+        {self.username}
+      </div>
+
     </header>
-    <section class="form-section">
+
+    <!-- <section class="form-section">
       <h1>New User</h1>
       <form method="GET" class="">
         <label for="username">Username</label><input type="text" name="username" id="username">
@@ -39,38 +40,34 @@
         <label for="miles-hiked">Miles Hiked</label><input type="text" name="miles-hiked" id="miles-hiked">
         <label for="time-hiked">Time Hiked</label><input type="text" name="time-hiked" id="time-hiked">
         <label>Your Trail Rating</label>
-        <input type="radio" name="rating" value="1" id="rating1" ><label for="rating1">1</label>
-        <input type="radio" name="rating" value="2" id="rating2" ><label for="rating2">2</label>
-        <input type="radio" name="rating" value="3" id="rating3" ><label for="rating3">3</label>
-        <input type="radio" name="rating" value="4" id="rating4" ><label for="rating4">4</label>
-        <input type="radio" name="rating" value="5" id="rating5" ><label for="rating5">5</label>
+        <div class="rating-section">
+          <input type="radio" name="rating" value="1" id="rating1" ><label for="rating1">1</label>
+          <input type="radio" name="rating" value="2" id="rating2" ><label for="rating2">2</label>
+          <input type="radio" name="rating" value="3" id="rating3" ><label for="rating3">3</label>
+          <input type="radio" name="rating" value="4" id="rating4" ><label for="rating4">4</label>
+          <input type="radio" name="rating" value="5" id="rating5" ><label for="rating5">5</label>
+        </div>
+        <input class="submit-button" type="submit" value="Track Hike">
       </form>
-    </section>
-    <!-- <section class="tracking-section">
+    </section> -->
+
+    <section class="tracking-section">
+
       <header class="tracking-header">
         <h2>Hikr Tracking</h2>
         <p>
           {self.email}
         </p>
       </header>
-      <table>
-        <tr class="head-tr">
-          <td class="head-td">Trail Name</td>
-          <td class="head-td">Difficulty</td>
-          <td class="head-td">Miles</td>
-          <td class="head-td">Time</td>
-          <td class="head-td">Rating</td>
-        </tr>
-        <tr>
-          <td>{self.trail-name}</td>
-          <td>{self.difficulty}</td>
-          <td>{self.miles-hiked}</td>
-          <td>{self.time-hiked}</td>
-          <td>{self.rating}</td>
-        </tr>
-      </table>
-    </section> -->
-    <footer></footer>
+
+      <h3 class="trail-title">Trail Name: {self.trail-name}</h3>
+      <p class="trail-info">Difficulty: {self.difficulty}</p>
+      <p class="trail-info">Miles: {self.miles-hiked}</p>
+      <p class="trail-info">Time: {self.time-hiked}</p>
+      <p class="trail-info">Rating: {self.rating}</p>
+
+    </section>
+
   </div>
 </body>
 </html>
