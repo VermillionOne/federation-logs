@@ -82,15 +82,11 @@ body {
 }
 
 /**
- * 2. ID Styles
- */
-
-
-
-/**
  * 3. Class Styles
  */
-
+body.view-2 {
+  background-image: url(../img/body-bg-2.jpg);
+}
 .main-header {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#101010+0,202020+95,0f0f0f+100 */
   background: #101010; /* Old browsers */

@@ -16,6 +16,21 @@ class Page(object):
         <header class="main-header">
             <img src="img/hikr-logo.png" class="logo" alt="Hikr Logo" />
         '''
+        self.head_2 = '''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hikr | New User</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Cabin:700,500,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{self.css}">
+</head>
+<body class="view-2">
+    <div class="container">
+        <header class="main-header">
+            <img src="img/hikr-logo.png" class="logo" alt="Hikr Logo" />
+        '''
         self.login_section = '''
             <div class="login">
                 <i class="fa fa-sign-in" aria-hidden="true"></i>
@@ -32,7 +47,7 @@ class Page(object):
             <h1>New User</h1>
             <form method="GET" class="">
                 <label for="username">Username</label><input type="text" name="username" id="username">
-                <label for="email">Email</label><input type="text" name="email" id="email">
+                <label for="email">Email</label><input type="email" name="email" id="email">
                 <label for="trail_name">Trail Name</label><input type="text" name="trail_name" id="trail_name">
                 <label for="difficulty">Difficulty</label>
                 <select class="" name="difficulty" id="difficulty">
@@ -68,8 +83,8 @@ class Page(object):
                 <article>
                     <h3 >{self.trail_name}</h3>
                     <p>Difficulty: {self.difficulty}</p>
-                    <p>Miles: {self.miles_hiked}</p>
-                    <p>Time: {self.time_hiked}</p>
+                    <p>Miles: {self.miles_hiked} miles</p>
+                    <p>Time: {self.time_hiked} hours</p>
                     <p>Rating: {self.rating}</p>
                 </article>
             </div>
@@ -87,5 +102,5 @@ class Page(object):
 
     # Setting the printed section for the tracking page view
     def print_tracking(self):
-        tracking_page = self.head + self.user_section + self.tracking_body + self.footer
+        tracking_page = self.head_2 + self.user_section + self.tracking_body + self.footer
         return tracking_page
