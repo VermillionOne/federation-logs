@@ -1,6 +1,7 @@
+import math
 '''
 RoomMeasurements class
-    attributes:
+    Attributes:
      __length
      __width
      __height
@@ -24,7 +25,6 @@ class RoomMeasurements(object):
         if new_length > 0:
             # set length to new value
             self.__length = new_length
-            print self.__length
         else:
             # Otherwise, print error message and set length to 0
             print 'Error: Invalid Length Value'
@@ -42,7 +42,6 @@ class RoomMeasurements(object):
         if new_width > 0:
             # set width to new value
             self.__width = new_width
-            print self.__width
         else:
             # Otherwise, print error message and set width to 0
             print 'Error: Invalid Width Value'
@@ -60,7 +59,6 @@ class RoomMeasurements(object):
         if new_height > 0:
             # set height to new value
             self.__height = new_height
-            print self.__height
         else:
             # Otherwise, print error message and set height to 0
             print 'Error: Invalid Height Value'
@@ -68,12 +66,12 @@ class RoomMeasurements(object):
 
 '''
 EvaluateArea class
-    attributes:
+    Attributes:
      __include_ceiling
      __wall_area
      __ceiling_area
 '''
-class EvaluateArea(object):
+class AreaController(object):
     def __init__(self):
         self.__include_ceiling = False
 
@@ -95,71 +93,123 @@ class EvaluateArea(object):
     '''
     find_wall_area function
         Arguments accepted:
-        from RoomMeasurements()
-            room.length ==> x_length
-            room.width  ==> y_width
-            room.height ==> z_height
+            room.length |-> x_length
+            room.width  |-> y_width
+            room.height |-> z_height
     '''
     def find_wall_area(self, x_length, y_width, z_height):
+        # If the length, width, and height values area all greater than 0
         if x_length > 0 and y_width > 0 and z_height > 0:
+            # Determine the combined area of the room walls
             return 2*(x_length * z_height) + 2*(y_width * z_height)
-        else:
-            return "Invalid Values"
+        # If length has no value or is equal to or less than zero
+        elif x_length == '' or x_length <= 0:
+            # Return that length needs a positive value
+            print "Please provide a value for length."
+        # If width has no value or is equal to or less than zero
+        elif y_width == '' or y_width <= 0:
+            # Return that width needs a positive value
+            print "Please provide a value for width."
+        # If height has no value or is equal to or less than zero
+        elif z_height == '' or z_height <= 0:
+            # Return that height needs a positive value
+            print "Please provide a value for height."
 
     '''
     find_ceiling_area function
         Arguments accepted:
-        from RoomMeasurements()
-            room.length ==> x_length
-            room.width  ==> y_width
-
+            room.length |-> x_length
+            room.width  |-> y_width
     '''
     def find_ceiling_area(self, x_length, y_width):
+        # If the length abd width values area all greater than 0
         if x_length > 0 and y_width > 0:
+            # Determine the area of the ceiling
             return x_length * y_width
-        else:
-            return "Invalid Values"
+        # If length has no value or is equal to or less than zero
+        elif x_length == '' or x_length <= 0:
+            # Return that length needs a positive value
+            print "Please provide a value for length."
+        # If width has no value or is equal to or less than zero
+        elif y_width == '' or y_width <= 0:
+            # Return that width needs a positive value
+            print "Please provide a value for width."
+
 '''
 EvaluateVolume class
-    attributes:
+    Attributes:
+     __primer_coverage
 '''
-class EvaluateVolume(object):
+class VolumeController(object):
+    def __init__(self):
+        self.__primer_coverage = 200
+        self.__finish_covergage = 350
+
+    # Getter for primer coverage value
+    # Static value - Read Only
+    @property
+    def primer_coverage(self):
+        return self.__primer_coverage
+    # Getter for finish coverage value
+    # Static value - Read Only
+    @property
+    def finish_coverage(self):
+        return self.__finish_covergage
 
     '''
     find_paint_volume function
         Arguments accepted:
-        surface area ==> area
-        paint volume ==> volume
+            self.wall_area, self.ceiling_area
+                |-> area
+            self.primer_coverage, self.finish_coverage
+                |-> volume
     '''
     def find_paint_volume(self, area, volume):
-        print area, '==> area 1'
-        area = float(area)
-        print area, '==> area 2'
+        # If area is greater than 0
+        if area > 0:
+            # Set area as a decimal number to allow for math manipulation
+            area = float(area)
+        else: # area may also be a string, in which case
+            # Set area to 0 to establish as an operable value
+            area = 0
+
+        # If area and volume are both greater than 0
         if area > 0 and volume > 0:
+            # return the dividend of the area divided by volume
             return area / volume
         else:
-            return "Invalid Values"
+            # Otherwise, set returned value to 0 and report that there are incorrect values
+            return 0
+            print "Invalid Values"
 
+    '''
+    determine_volume_unit function
+        Arguments accepted:
+            self.wall_primer_volume, self.wall_finish_volume
+                |-> volume_decimal
+    '''
     def determine_volume_unit(self, volume_decimal):
-        print volume_decimal
-        volume_decimal = float(volume_decimal)
-        print volume_decimal
-        volume_decimal = 100 * volume_decimal
-        print volume_decimal
-        volume_decimal = round(volume_decimal)
-        print volume_decimal
-        if volume_decimal < 25:
+        # Set volume number as rounded whole number for use in units
+        volume_decimal = round(100*(float(volume_decimal)))
+        # Determine which volume unit to use: quart or gallon
+        # If volume_decimal is less than 25, set unit to be one 1 quart
+        if 0 < volume_decimal < 25:
             return '1 quart'
-        elif volume_decimal < 50:
+        # If volume_decimal is less than 50, set unit to be one 2 quarts
+        elif 26 < volume_decimal < 50:
             return '2 quarts'
-        elif volume_decimal < 75:
+        # If volume_decimal is less than 75, set unit to be one 3 quarts
+        elif 51 < volume_decimal < 75:
             return '3 quarts'
-        elif volume_decimal < 100:
-            return '4 quarts'
-        elif volume_decimal < 125:
-            return "1 gallon"
+        # If volume_decimal is less than 100, set unit to be one 1 gallon
+        elif 76 < volume_decimal < 100:
+            return '1 gallon'
+        # If volume_decimal is less than 50, set unit to be one 2 gallons
+        elif volume_decimal < 150:
+            return '2 gallons'
+        # if any other value return, set unit to gallons of next whole number
         else:
-            return str(round(volume_decimal/100)) + " gallons"
+            return str(int(math.ceil(volume_decimal/100))) + " gallons"
 # To Do List:
 # Create functions to added page sections
 # Finish Adding comments
