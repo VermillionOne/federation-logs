@@ -25,9 +25,9 @@ class RoomMeasurements(object):
             # set length to new value
             self.__length = new_length
         else:
-            # Otherwise, print error message and set length to 1
+            # Otherwise, print error message and set length to 0
             print 'Error: Invalid Length Value'
-            self.__length = 1
+            self.__length = 0
 
     # Getter for room width
     @property
@@ -42,9 +42,9 @@ class RoomMeasurements(object):
             # set width to new value
             self.__width = new_width
         else:
-            # Otherwise, print error message and set width to 1
+            # Otherwise, print error message and set width to 0
             print 'Error: Invalid Width Value'
-            self.__width = 1
+            self.__width = 0
 
     # Getter for room height
     @property
@@ -59,6 +59,6 @@ class RoomMeasurements(object):
             # set height to new value
             self.__height = new_height
         else:
-            # Otherwise, print error message and set height to 1
+            # Otherwise, print error message and set height to 0
             print 'Error: Invalid Height Value'
-            self.__height = 1
+            self.__height = 0
