@@ -2,11 +2,11 @@ class Page(object):
     def __init__(self):
         pass
 
-    def head(self):
-        pass
+    self.head = '''
+    '''
 
-    def body(self):
-        pass
+    self.body = '''
+    '''
 
-    def footer(self):
-        pass
+    self.footer = '''
+    '''
