@@ -114,14 +114,19 @@ class EvaluateArea(object):
             room.width  ==> y_width
 
     '''
-    def find_ceiling_area(self, x_length, y_width, ceiling):
-        if x_length > 0 and y_width > 0 and ceiling == True:
+    def find_ceiling_area(self, x_length, y_width):
+        if x_length > 0 and y_width > 0:
             return x_length * y_width
         else:
             return "Invalid Values"
+'''
+EvaluateVolume class
+    attributes:
+'''
+class EvaluateVolume(object):
 
     '''
-    find_finish_volume function
+    find_paint_volume function
         Arguments accepted:
         surface area ==> area
         paint volume ==> volume
@@ -134,3 +139,27 @@ class EvaluateArea(object):
             return area / volume
         else:
             return "Invalid Values"
+
+    def determine_volume_unit(self, volume_decimal):
+        print volume_decimal
+        volume_decimal = float(volume_decimal)
+        print volume_decimal
+        volume_decimal = 100 * volume_decimal
+        print volume_decimal
+        volume_decimal = round(volume_decimal)
+        print volume_decimal
+        if volume_decimal < 25:
+            return '1 quart'
+        elif volume_decimal < 50:
+            return '2 quarts'
+        elif volume_decimal < 75:
+            return '3 quarts'
+        elif volume_decimal < 100:
+            return '4 quarts'
+        elif volume_decimal < 125:
+            return "1 gallon"
+        else:
+            return str(round(volume_decimal/100)) + " gallons"
+# To Do List:
+# Create functions to added page sections
+# Finish Adding comments
