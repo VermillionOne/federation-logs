@@ -1,12 +1,11 @@
 class Page(object):
     def __init__(self):
-        pass
 
-    self.head = '''
-    '''
+        self.head = '''
+        '''
 
-    self.body = '''
-    '''
+        self.body = '''
+        '''
 
-    self.footer = '''
-    '''
+        self.footer = '''
+        '''
