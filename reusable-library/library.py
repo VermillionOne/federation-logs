@@ -1,4 +1,44 @@
 import math
+
+'''
+UserName class
+    Attributes:
+     __name
+     __email
+'''
+class UserInfo(object):
+    def __init__(self):
+        self.__name = ''
+        self.__email = ''
+
+    # Getter for user name
+    @property
+    def name(self):
+        # Return value of user name
+        return self.__name
+    # Setter for user name
+    @name.setter
+    def name(self, new_name):
+        # if
+        if new_name is not '':
+            self.__name = new_name
+        else:
+            print 'No string for input'
+
+    # Getter for user email
+    @property
+    def email(self):
+        # Return value of user email
+        return self.__email
+    # Setter for user email
+    @email.setter
+    def email(self, new_email):
+        # if
+        if new_email is not '':
+            self.__email = new_email
+        else:
+            print 'No string for input'
+
 '''
 RoomMeasurements class
     Attributes:
@@ -139,12 +179,12 @@ class AreaController(object):
 EvaluateVolume class
     Attributes:
      __primer_coverage
+     __finish_coverage
 '''
 class VolumeController(object):
     def __init__(self):
         self.__primer_coverage = 200
-        self.__finish_covergage = 350
-
+        self.__finish_coverage = 350
     # Getter for primer coverage value
     # Static value - Read Only
     @property
@@ -154,7 +194,7 @@ class VolumeController(object):
     # Static value - Read Only
     @property
     def finish_coverage(self):
-        return self.__finish_covergage
+        return self.__finish_coverage
 
     '''
     find_paint_volume function
