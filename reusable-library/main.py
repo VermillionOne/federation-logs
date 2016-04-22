@@ -18,7 +18,6 @@ class MainHandler(webapp2.RequestHandler):
         Will be replaced by user input values
         '''
         user.name ='Tim Castillo'
-        user.email = "tjc0609@gmail.com"
         room.length = 0
         room.width  = 0
         room.height = 0

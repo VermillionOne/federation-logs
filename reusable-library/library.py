@@ -4,12 +4,10 @@ import math
 UserName class
     Attributes:
      __name
-     __email
 '''
 class UserInfo(object):
     def __init__(self):
         self.__name = ''
-        self.__email = ''
 
     # Getter for user name
     @property
@@ -22,20 +20,6 @@ class UserInfo(object):
         # if
         if new_name is not '':
             self.__name = new_name
-        else:
-            print 'No string for input'
-
-    # Getter for user email
-    @property
-    def email(self):
-        # Return value of user email
-        return self.__email
-    # Setter for user email
-    @email.setter
-    def email(self, new_email):
-        # if
-        if new_email is not '':
-            self.__email = new_email
         else:
             print 'No string for input'
 
