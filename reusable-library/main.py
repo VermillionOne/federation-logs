@@ -19,9 +19,9 @@ class MainHandler(webapp2.RequestHandler):
         '''
         user.name ='Tim Castillo'
         user.email = "tjc0609@gmail.com"
-        room.length = 12
-        room.width  = 15
-        room.height = 8
+        room.length = 0
+        room.width  = 0
+        room.height = 0
         area.include_ceiling = True
         '''
         End of manually entered values
