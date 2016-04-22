@@ -90,29 +90,8 @@ class RoomMeasurements(object):
 
 '''
 EvaluateArea class
-    Attributes:
-     __include_ceiling
-     __wall_area
-     __ceiling_area
 '''
 class AreaController(object):
-    def __init__(self):
-        self.__include_ceiling = False
-
-    # Getter for __include_ceiling
-    @property
-    def include_ceiling(self):
-        return self.__include_ceiling
-    # Setter for __include_ceiling
-    @include_ceiling.setter
-    def include_ceiling(self, new_ceiling):
-        # if ceiling area is included
-        if new_ceiling == True:
-            # set __include_ceiling to True
-            self.__include_ceiling = True
-        else:
-            # Otherwise, set __include_ceiling to False
-            self.__include_ceiling = False
 
     '''
     find_wall_area function
@@ -125,7 +104,7 @@ class AreaController(object):
         # If the length, width, and height values area all greater than 0
         if x_length > 0 and y_width > 0 and z_height > 0:
             # Determine the combined area of the room walls
-            return 2*(x_length * z_height) + 2*(y_width * z_height)
+            return 2*(int(x_length) * int(z_height)) + 2*(int(y_width) * int(z_height))
         # If length has no value or is equal to or less than zero
         elif x_length == '' or x_length <= 0:
             # Return that length needs a positive value
@@ -149,7 +128,7 @@ class AreaController(object):
         # If the length abd width values area all greater than 0
         if x_length > 0 and y_width > 0:
             # Determine the area of the ceiling
-            return x_length * y_width
+            return int(x_length) * int(y_width)
         # If length has no value or is equal to or less than zero
         elif x_length == '' or x_length <= 0:
             # Return that length needs a positive value
@@ -234,6 +213,3 @@ class VolumeController(object):
         # if any other value return, set unit to gallons of next whole number
         else:
             return str(int(math.ceil(volume_decimal/100))) + " gallons"
-# To Do List:
-# Create functions to added page sections
-# Finish Adding comments

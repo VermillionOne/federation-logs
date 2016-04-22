@@ -50,10 +50,7 @@ form input[type=text], form input[type=email], form input[type=number]  {
   padding: 5px 10px;
   width: 98%;
 }
-form > label:last-of-type {
-  margin: 20px 0;
-  display: block;
-}
+
 form input[type=checkbox] {
   display: inline;
   width: 20px;
@@ -64,6 +61,7 @@ form button {
   color: #fff;
   border: 0px solid;
   border-radius: 3px;
+  margin: 20px 0 0;
   font-size: 1.25em;
   padding: 10px 20px;
 }
