@@ -1,0 +1,72 @@
+/**
+ * Tag Styles
+ */
+body {
+  background: url(img/small-crackle-bright/small-crackle-bright.png);
+  background-position: center;
+  background-attachment: fixed;
+  font-family: Comfortaa;
+}
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+header, div.container {
+  background: rgba(185,185,185,0.5);
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0 0px 10px rgba(0,0,0,.15), 0 2px 2px rgba(0,0,0,.25), inset 0 -2px 2px rgba(255,255,255,.25), inset 0 0 100px rgba(255,255,255,.75);
+  max-width: 600px;
+  min-width: 320px;
+  margin: 20px auto 0;
+  overflow: auto;
+  padding: 10px 20px 20px;
+  position: relative;
+  width: 50%;
+}
+header img {
+  width: 60px;
+  float: right;
+}
+header h1 {
+  font-size: 3em;
+  display: inline-block;
+}
+form label {
+  display: block;
+  font-size: 1.25em;
+  margin: 20px 0 5px;
+  width: 100%;
+}
+form label:first-of-type {
+  margin: 10px 0 5px;
+}
+form input[type=text], form input[type=email], form input[type=number]  {
+  border-radius: 5px;
+  border: 0px solid;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.5);
+  box-sizing: border-box;
+  font-size: 1.15em;
+  padding: 5px 10px;
+  width: 98%;
+}
+form > label:last-of-type {
+  margin: 20px 0;
+  display: block;
+}
+form input[type=checkbox] {
+  display: inline;
+  width: 20px;
+  height: 17px;
+}
+form button {
+  background: #347634;
+  color: #fff;
+  border: 0px solid;
+  border-radius: 3px;
+  font-size: 1.25em;
+  padding: 10px 20px;
+}
+/**
+ * Class Styles
+ */
