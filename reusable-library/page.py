@@ -1,6 +1,6 @@
 class Page(object):
     def __init__(self):
-
+        # Head section of HTML
         self.head = '''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +19,7 @@ class Page(object):
 
   <div class="container">
         '''
-
+        # Form Section of HTML
         self.form_body = '''
     <h2>Room Dimensions</h2>
     <p>
@@ -35,18 +35,19 @@ class Page(object):
       <p><sub><sup>*</sup>required</sub></p>
     </form>
         '''
-
+        # Beginning Tag for Results section due to variance in greeting
         self.results_starting_tag = '''
     <section>
         '''
-
+        # Basic Greeting omitting user name local variable
         self.basic_greeting = '''
       <h2>Here are your results</h2>
         '''
+        # Personalized greeting including user name local variable
         self.personalized_greeting = '''
       <h2>Hello, {self.user_name}! Here are your results</h2>
         '''
-
+        # Results body with area and paint volume results
         self.results_body = '''
     <section>
       <div class="area_holder">
@@ -65,7 +66,7 @@ class Page(object):
       <p>{self.ceiling_finish_unit} of finish. </p>
     </section>
         '''
-
+        # Closing of tags from head section
         self.footer = '''
   </div>
 </body>
@@ -76,6 +77,7 @@ class Page(object):
     compile_form function
     '''
     def compile_form(self):
+        # Return sections necessary for form section
         return self.head + self.form_body + self.footer
 
     '''
@@ -85,7 +87,10 @@ class Page(object):
                 |-> name
     '''
     def compile_results(self, name):
+        # if the user name variable is not empty
         if name != '':
+            # Return with personalized_greeting included
             return self.head + self.results_starting_tag + self.personalized_greeting + self.results_body + self.footer
         else:
+            # Otherwise, return with basic_greeting included instead
             return self.head + self.results_starting_tag + self.basic_greeting + self.results_body + self.footer
