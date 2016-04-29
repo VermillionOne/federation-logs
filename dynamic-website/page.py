@@ -1,6 +1,7 @@
 class Page(object):
     """docstring for Page"""
     def __init__(self):
+        # Header section for the main page template
         self.header = '''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +32,7 @@ class Page(object):
 
     </header>
         '''
-
+        # Sidebar section for the main page template
         self.aside = '''
     <aside class="main-menu">
 
@@ -48,7 +49,7 @@ class Page(object):
 
     </aside>
         '''
-
+        # Main body section for the main page template
         self.body = '''
     <section>
 
@@ -60,9 +61,8 @@ class Page(object):
 
     </section>
         '''
-
+        # Footer section for the main page template
         self.footer = '''
-
     <footer>
       <svg class="bottom-left" version="1.1" x="0px" y="0px" width="222px" height="43px">
         <path fill="#FF9900" d="M181,7V0H0v15.8C0,30.8,12.2,43,27.2,43H222V19h-29C186.4,19,181,13.6,181,7z"/>
