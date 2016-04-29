@@ -31,6 +31,36 @@ class Page(object):
 
     </header>
         '''
+
+        self.aside = '''
+    <aside class="main-menu">
+
+      <ul>
+        <li><a href="">Main</a></li> <p class="active-block"></p>
+        <li><a href="">Sovereign</a></li>
+        <li><a href="">Galaxy</a></li>
+        <li><a href="">Excelsior</a></li>
+        <li><a href="">Constitution</a></li>
+        <li><a href="">Intrepid</a></li>
+      </ul>
+
+      <div class="side-bar"></div>
+
+    </aside>
+        '''
+
+        self.body = '''
+    <section>
+
+      <img class="federation-logo" src="img/federation-logo.png" alt="United Federation of Planets Insignia" />
+
+      <h2>
+        Starfleet Starship Database
+      </h2>
+
+    </section>
+        '''
+
         self.footer = '''
 
     <footer>
@@ -49,7 +79,7 @@ class Page(object):
         '''
 
 class ContentPage(Page):
-    """docstring for ContentPage"""
+    #docstring for ContentPage
     def __init__(self, arg):
         super(ContentPage, self).__init__()
         self.arg = arg
