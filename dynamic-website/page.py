@@ -134,3 +134,10 @@ class ContentPage(Page):
 
     </section>
         '''
+    # Function to print out content page
+    def print_content_page(self, class_id):
+        #If the class ID mathces sovereign
+        if class_id is sovereign:
+            print 'sovereign'
+        else:
+            pass
