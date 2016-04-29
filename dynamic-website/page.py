@@ -95,6 +95,9 @@ class Page(object):
 </html>
         '''
 
+    def print_main_page(self):
+        return self.header + self.aside + self.aside_active + self.aside_sovereign + self.aside_galaxy + self.aside_excelsior + self.aside_constitution + self.aside_intrepid + self.aside_close + self.body + self.footer
+
 class ContentPage(Page):
     #docstring for ContentPage
     def __init__(self, arg):

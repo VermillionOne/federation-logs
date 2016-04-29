@@ -3,15 +3,20 @@
 # Dynamic Site Project
 # April 27, 2016
 
+# Import necessary assets
 import webapp2
+from page import Page, ContentPage
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+        page = Page()
 
+        if self.request.GET:
+            pass
+        else:
+            self.main_page = page.print_main_page()
 
-
-
+        self.response.write(self.main_page)
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
