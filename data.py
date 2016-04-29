@@ -82,3 +82,6 @@ class ShipClass(Ship):
         intrepid.img_url = "intrepid-class.jpg"
         intrepid.img_description = "Intrepid Class Starship"
         intrepid.description = "The Intrepid class was designed to fulfill the roles of an exploration and science vessel along with a light combat capability; it is also one of the fastest and most agile ships in the fleet. As with many other recent ships classes, experience with loss of several of the initial multi-purpose Galaxy class ships alerted Starfleet that smaller ships with a more specific mission may be a better overall fleet strategy; thus the Intrepid class was designed to take on some of the Galaxy's exploration and science missions. Unlike the Galaxy class ships, the Intrepid is not heavily armed but is equipped well enough to defend itself; this combined with its speed and maneuverability makes it ideal for border patrol against lightly armed forces such as raiders and the Marquis, in locations that a massive Galaxy class would not be able to operate."
+
+        # Array to access data in Subclass
+        self.ship_class_list = [sovereign, galaxy, excelsior, constitution, intrepid]
