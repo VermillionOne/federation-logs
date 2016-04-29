@@ -1,0 +1,150 @@
+/**
+ * Tag Styles
+ */
+body {
+  background: #0f0f0f;
+  color: #fff;
+  font-family: 'BenchNine', sans-serif;
+  text-transform: uppercase;
+}
+header {
+  clear: both;
+  float: left;
+  width: 100%;
+}
+svg {
+  margin: 0;
+}
+aside {
+  box-sizing: border-box;
+  float: left;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 181px;
+}
+aside ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+aside ul li {
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  width: calc(100% - 20px);
+}
+aside ul li a {
+  background: #7b6ec6;
+  color: #000000;
+  display: block;
+  float: left;
+  margin: 10px 0 0;
+  padding: 0 10px 0;
+  text-decoration: none;
+  width: calc(100% - 25px);
+}
+section {
+  float: right;
+  position: relative;
+  width: calc(100% - 181px);
+  text-align: center;
+}
+dl {
+  width: 200px;
+  text-align: left;
+  margin: 10px 0 0 45px;
+}
+dl dt {
+  color: #F4E221;
+  float: left;
+  text-align: right;
+  margin: 0 5px 0 0;
+  width: 110px;
+}
+dl dd {
+  float: left;
+  width: 80px;
+  display: block;
+  margin: 0;
+}
+footer {
+  float: left;
+  width: 100%;
+}
+
+/**
+ * Class Styles
+ */
+.top-left {
+  float: left;
+}
+.top-right {
+  float: right;
+}
+.main-header {
+  background: #0f0f0f;
+  color: #7b6ec6;
+  float: left;
+  font-size: 4.2em;
+  padding: 0 0 0 3px;
+  position: absolute;
+  right: 40px;
+  text-align: center;
+  top: -10px;
+  margin: 0px;
+}
+.header-bar {
+  float: left;
+  background: #ff9900;
+  height: 48px;
+  margin: 0 0 0 5px;
+  width: calc(100% - 450px);
+}
+.active-block {
+  background: #36ac1e;
+  float: right;
+  margin: 10px 0 0;
+  padding: 0;
+  width: 15px;
+  height: 21px;
+}
+.side-bar {
+  box-sizing: border-box;
+  background: #ffbf00;
+  float: left;
+  margin: 10px 0;
+  padding: 0;
+  height: calc(100vh - 366px);
+  position: relative;
+  width: 181px;
+}
+.federation-logo {
+  width: 200px;
+}
+.description {
+  width: calc(100% - 83px);
+  padding: 20px 0 0 50px;
+  clear: both;
+  text-align: left;
+}
+.bottom-left {
+  float: left;
+}
+.footer-bar {
+  float: left;
+  background: #ff9900;
+  height: 23.8px;
+  margin: 19.16px 0 0 5px;
+  width: calc(100% - 259px);
+}
+.bottom-right{
+  float: right;
+  background: #ff9900;
+  border-radius: 0 20px 20px 0;
+  height: 23.8px;
+  margin: 19.16px 0 0 5px;
+  width: 27px;
+}
