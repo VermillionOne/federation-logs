@@ -1,7 +1,7 @@
 # Superclass Data object for ship classes
 class Ship(object):
     def __init__(self):
-        self.header = ""
+        self.header = "database"
         self.armaments = ""
         self.defenses = ""
         self.decks = ""

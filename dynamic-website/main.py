@@ -6,11 +6,13 @@
 # Import necessary assets
 import webapp2
 from page import Page, ContentPage
+from data import Ship, ShipClass
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         page = Page()
-
+        ship - Ship()
+        print ship
         if self.request.GET:
             pass
         else:
