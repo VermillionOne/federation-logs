@@ -32,23 +32,34 @@ class Page(object):
 
     </header>
         '''
-        # Sidebar section for the main page template
+        # Sidebar section for the sovereign class
         self.aside = '''
     <aside class="main-menu">
 
       <ul>
-        <li><a href="">Main</a></li> <p class="active-block"></p>
+        <li><a href="">Main</a></li>
+        '''
+        self.aside_sovereign = '''
         <li><a href="">Sovereign</a></li>
+        '''
+        self.aside_galaxy = '''
         <li><a href="">Galaxy</a></li>
+        '''
+        self.aside_excelsior = '''
         <li><a href="">Excelsior</a></li>
+        '''
+        self.aside_constitution = '''
         <li><a href="">Constitution</a></li>
+        '''
+        self.aside_intrepid = '''
         <li><a href="">Intrepid</a></li>
+        '''
+        self.aside_close = '''
       </ul>
-
       <div class="side-bar"></div>
-
     </aside>
         '''
+        self.aside_active = '''<p class="active-block"></p>'''
         # Main body section for the main page template
         self.body = '''
     <section>
@@ -82,4 +93,4 @@ class ContentPage(Page):
     #docstring for ContentPage
     def __init__(self, arg):
         super(ContentPage, self).__init__()
-        self.arg = arg
+        pass
