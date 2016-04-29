@@ -122,7 +122,8 @@ footer {
   width: 181px;
 }
 .federation-logo {
-  width: 200px;
+  width: calc(100% - 200px);
+  max-width: 80vh;
 }
 .description {
   width: calc(100% - 83px);

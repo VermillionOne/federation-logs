@@ -35,30 +35,36 @@ class Page(object):
         # Sidebar section for the sovereign class
         self.aside = '''
     <aside class="main-menu">
-
       <ul>
         <li><a href="">Main</a></li>
         '''
+        # Menu element to select Sovereign class
         self.aside_sovereign = '''
         <li><a href="">Sovereign</a></li>
         '''
+        # Menu element to select Galaxy class
         self.aside_galaxy = '''
         <li><a href="">Galaxy</a></li>
         '''
+        # Menu element to select Excelsior class
         self.aside_excelsior = '''
         <li><a href="">Excelsior</a></li>
         '''
+        # Menu element to select Constitution class
         self.aside_constitution = '''
         <li><a href="">Constitution</a></li>
         '''
+        # Menu element to select Intrepid class
         self.aside_intrepid = '''
         <li><a href="">Intrepid</a></li>
         '''
+        # Menu element to close side bar
         self.aside_close = '''
       </ul>
       <div class="side-bar"></div>
     </aside>
         '''
+        # Menu element to show active class
         self.aside_active = '''<p class="active-block"></p>'''
         # Main body section for the main page template
         self.body = '''
@@ -93,4 +99,35 @@ class ContentPage(Page):
     #docstring for ContentPage
     def __init__(self, arg):
         super(ContentPage, self).__init__()
-        pass
+
+        self.body = '''
+    <section>
+
+      <dl>
+        <dt>Name:</dt>
+          <dd>{self.name}</dd>
+        <dt>Class:</dt>
+          <dd>{self.class}</dd>
+        <dt>Armaments:</dt>
+          <dd>{self.armaments}</dd>
+        <dt>Decks:</dt>
+          <dd>{self.decks}</dd>
+        <dt>Crew:</dt>
+          <dd>{self.crew}</dd>
+        <dt>Cruising Speed:</dt>
+          <dd>{self.cruise_speed}</dd>
+        <dt>Max Cruising Speed:</dt>
+          <dd>{self.max_cruise_speed}</dd>
+        <dt>Maximum Speed:</dt>
+          <dd>{self.maximum_speed}</dd>
+      </dl>
+
+      <img src="{self.img_url}" alt="{self.img_description}" />
+
+      <p class="description">
+        {self.description}
+      </p>
+
+
+    </section>
+        '''
