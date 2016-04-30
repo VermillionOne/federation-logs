@@ -36,7 +36,7 @@ class Page(object):
         self.aside = '''
     <aside class="main-menu">
       <ul>
-        <li><a href="?id=main">Main</a></li>
+        <li><a href="?id=5">Main</a></li>
         '''
         # Menu element to select Sovereign class
         self.aside_sovereign = '''
@@ -133,11 +133,9 @@ class ContentPage(Page):
     # The puropse of these concatenations is to provide the menu with proper active tab
     # Function to print out sovereign content page
     def print_sovereign_page(self):
-        print 'testing'
         return self.header + self.aside + self.aside_sovereign + self.aside_active + self.aside_galaxy + self.aside_excelsior + self.aside_constitution + self.aside_intrepid + self.aside_close + self.body + self.footer
     # Function to print out galaxy content page
     def print_galaxy_page(self):
-        print 'testing'
         return self.header + self.aside + self.aside_sovereign + self.aside_galaxy + self.aside_active + self.aside_excelsior + self.aside_constitution + self.aside_intrepid + self.aside_close + self.body + self.footer
     # Function to print out excelsior content page
     def print_excelsior_page(self):
