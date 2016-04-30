@@ -2,7 +2,7 @@
  * Tag Styles
  */
 body {
-  background: #0f0f0f;
+  background: #000;
   color: #fff;
   font-family: 'BenchNine', sans-serif;
   text-transform: uppercase;
@@ -41,6 +41,7 @@ aside ul li a {
   color: #000000;
   display: block;
   float: left;
+  font-size: 1.25em;
   margin: 10px 0 0;
   padding: 0 10px 0;
   text-decoration: none;
@@ -53,7 +54,7 @@ section {
   text-align: center;
 }
 dl {
-  width: 200px;
+  width: 250px;
   text-align: left;
   margin: 10px 0 0 45px;
 }
@@ -66,7 +67,7 @@ dl dt {
 }
 dl dd {
   float: left;
-  width: 80px;
+  width: 125px;
   display: block;
   margin: 0;
 }
@@ -85,7 +86,7 @@ footer {
   float: right;
 }
 .main-header {
-  background: #0f0f0f;
+  background: #000;
   color: #7b6ec6;
   float: left;
   font-size: 4.2em;
@@ -109,7 +110,7 @@ footer {
   margin: 10px 0 0;
   padding: 0;
   width: 15px;
-  height: 21px;
+  height: 27px;
 }
 .side-bar {
   box-sizing: border-box;
@@ -117,7 +118,7 @@ footer {
   float: left;
   margin: 10px 0;
   padding: 0;
-  height: calc(100vh - 366px);
+  height: calc(100vh - 390px);
   position: relative;
   width: 181px;
 }
@@ -128,6 +129,7 @@ footer {
 .description {
   width: calc(100% - 83px);
   padding: 20px 0 0 50px;
+  text-transform: none;
   clear: both;
   text-align: left;
 }

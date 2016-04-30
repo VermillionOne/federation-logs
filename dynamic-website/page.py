@@ -100,17 +100,13 @@ class Page(object):
 
 class ContentPage(Page):
     #docstring for ContentPage
-    def __init__(self, arg):
+    def __init__(self):
         super(ContentPage, self).__init__()
 
         self.body = '''
     <section>
 
       <dl>
-        <dt>Name:</dt>
-          <dd>{self.name}</dd>
-        <dt>Class:</dt>
-          <dd>{self.class}</dd>
         <dt>Armaments:</dt>
           <dd>{self.armaments}</dd>
         <dt>Decks:</dt>
@@ -125,19 +121,29 @@ class ContentPage(Page):
           <dd>{self.maximum_speed}</dd>
       </dl>
 
-      <img src="{self.img_url}" alt="{self.img_description}" />
+      <img src="img/{self.img_url}" alt="{self.img_description}" />
 
       <p class="description">
         {self.description}
       </p>
 
-
     </section>
         '''
-    # Function to print out content page
-    def print_content_page(self, class_id):
-        #If the class ID mathces sovereign
-        if class_id is sovereign:
-            print 'sovereign'
-        else:
-            pass
+    # The puropse of these concatenations is to provide the menu with proper active tab
+    # Function to print out sovereign content page
+    def print_sovereign_page(self):
+        print 'testing'
+        return self.header + self.aside + self.aside_sovereign + self.aside_active + self.aside_galaxy + self.aside_excelsior + self.aside_constitution + self.aside_intrepid + self.aside_close + self.body + self.footer
+    # Function to print out galaxy content page
+    def print_galaxy_page(self):
+        print 'testing'
+        return self.header + self.aside + self.aside_sovereign + self.aside_galaxy + self.aside_active + self.aside_excelsior + self.aside_constitution + self.aside_intrepid + self.aside_close + self.body + self.footer
+    # Function to print out excelsior content page
+    def print_excelsior_page(self):
+        return self.header + self.aside + self.aside_sovereign + self.aside_galaxy + self.aside_excelsior + self.aside_active + self.aside_constitution + self.aside_intrepid + self.aside_close + self.body + self.footer
+    # Function to print out constitution content page
+    def print_constitution_page(self):
+        return self.header + self.aside + self.aside_sovereign + self.aside_galaxy + self.aside_excelsior + self.aside_constitution + self.aside_active + self.aside_intrepid + self.aside_close + self.body + self.footer
+    # Function to print out intrepid content page
+    def print_intrepid_page(self):
+        return self.header + self.aside + self.aside_sovereign + self.aside_galaxy + self.aside_excelsior + self.aside_constitution + self.aside_intrepid + self.aside_active + self.aside_close + self.body + self.footer
