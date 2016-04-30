@@ -129,7 +129,11 @@ class MainHandler(webapp2.RequestHandler):
             elif new_view == 'main':
                 # Grab main page concatenation
                 current_view = page.print_main_page()
+                # change data back to main page
+                ship_data = ship
                 # Insert local variables
+                current_view = current_view.format(**locals())
+
         #if the response yields anything else
         else:
             # Grab main page concatenation

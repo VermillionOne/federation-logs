@@ -90,6 +90,7 @@ class Page(object):
       <div class="bottom-right"></div>
     </footer>
 
+    <p class="small-print">Star Trek and all related material are registered trademarks of Paramount Pictures. All information relating to Star Trek on the following pages is solely intended for the entertainment of the viewer only. All known information and image sources have been credited, no copyright infringement is intended. Content used aquired from <a href="www.st-intelligence.com">www.st-intelligence.com</a></p>
 
   </body>
 </html>

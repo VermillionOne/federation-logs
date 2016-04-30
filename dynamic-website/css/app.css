@@ -130,6 +130,7 @@ footer {
   width: calc(100% - 83px);
   padding: 20px 0 0 50px;
   text-transform: none;
+  font-size: 1.25em;
   clear: both;
   text-align: left;
 }
@@ -142,6 +143,15 @@ footer {
   height: 23.8px;
   margin: 19.16px 0 0 5px;
   width: calc(100% - 259px);
+}
+.small-print {
+  clear: both;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: none;
+  width: 80%;
 }
 .bottom-right{
   float: right;
