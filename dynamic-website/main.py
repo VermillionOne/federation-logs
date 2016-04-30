@@ -21,11 +21,12 @@ class MainHandler(webapp2.RequestHandler):
         if self.request.GET:
             new_view = self.request.GET['id']
 
-            if new_view == 'sovereign':
+            if new_view == '0':
                 print new_view
                 # Grab sovereign page concatenation
                 current_view = content.print_sovereign_page()
-                ship_data = ship_class.ship_class_list[0]
+                # Get Data for ship class
+                ship_data = ship_class.ship_class_list[int(new_view)]
                 self.header = ship_data.header
                 self.armaments = ship_data.armaments
                 self.defenses = ship_data.defenses
@@ -41,43 +42,34 @@ class MainHandler(webapp2.RequestHandler):
                 current_view = current_view.format(**locals())
 
             #if the response yields galaxy
-            elif new_view == 'galaxy':
+            elif new_view == '1':
                 print new_view
                 # Grab sovereign page concatenation
                 current_view = content.print_galaxy_page()
-                ship_data = ship_class.ship_class_list[1]
+                # Get Data for ship class
+                ship_data = ship_class.ship_class_list[int(new_view)]
                 self.header = ship_data.header
-                print self.header
                 self.armaments = ship_data.armaments
-                print self.armaments
                 self.defenses = ship_data.defenses
-                print self.defenses
                 self.decks = ship_data.decks
-                print self.decks
                 self.crew = ship_data.crew
-                print self.crew
                 self.cruise_speed = ship_data.cruise_speed
-                print self.cruise_speed
                 self.max_cruise_speed = ship_data.max_cruise_speed
-                print self.max_cruise_speed
                 self.maximum_speed = ship_data.maximum_speed
-                print self.maximum_speed
                 self.img_url = ship_data.img_url
-                print self.img_url
                 self.img_description = ship_data.img_description
-                print self.img_description
                 self.description = ship_data.description
-                print self.description
                 # Insert local variables
 
                 current_view = current_view.format(**locals())
 
             #if the response yields excelsior
-            elif new_view == 'excelsior':
+            elif new_view == '2':
                 print new_view
                 # Grab sovereign page concatenation
                 current_view = content.print_excelsior_page()
-                ship_data = ship_class.ship_class_list[2]
+                # Get Data for ship class
+                ship_data = ship_class.ship_class_list[int(new_view)]
                 self.header = ship_data.header
                 self.armaments = ship_data.armaments
                 self.defenses = ship_data.defenses
@@ -93,11 +85,12 @@ class MainHandler(webapp2.RequestHandler):
                 current_view = current_view.format(**locals())
 
             #if the response yields constitution
-            elif new_view == 'constitution':
+            elif new_view == '3':
                 print new_view
                 # Grab sovereign page concatenation
                 current_view = content.print_constitution_page()
-                ship_data = ship_class.ship_class_list[3]
+                # Get Data for ship class
+                ship_data = ship_class.ship_class_list[int(new_view)]
                 self.header = ship_data.header
                 self.armaments = ship_data.armaments
                 self.defenses = ship_data.defenses
@@ -113,11 +106,12 @@ class MainHandler(webapp2.RequestHandler):
                 current_view = current_view.format(**locals())
 
             #if the response yields intrepid
-            elif new_view == 'intrepid':
+            elif new_view == '4':
                 print new_view
                 # Grab sovereign page concatenation
                 current_view = content.print_intrepid_page()
-                ship_data = ship_class.ship_class_list[4]
+                # Get Data for ship class
+                ship_data = ship_class.ship_class_list[int(new_view)]
                 self.header = ship_data.header
                 self.armaments = ship_data.armaments
                 self.defenses = ship_data.defenses

@@ -40,23 +40,23 @@ class Page(object):
         '''
         # Menu element to select Sovereign class
         self.aside_sovereign = '''
-        <li><a href="?id=sovereign">Sovereign</a></li>
+        <li><a href="?id=0">Sovereign</a></li>
         '''
         # Menu element to select Galaxy class
         self.aside_galaxy = '''
-        <li><a href="?id=galaxy">Galaxy</a></li>
+        <li><a href="?id=1">Galaxy</a></li>
         '''
         # Menu element to select Excelsior class
         self.aside_excelsior = '''
-        <li><a href="?id=excelsior">Excelsior</a></li>
+        <li><a href="?id=2">Excelsior</a></li>
         '''
         # Menu element to select Constitution class
         self.aside_constitution = '''
-        <li><a href="?id=constitution">Constitution</a></li>
+        <li><a href="?id=3">Constitution</a></li>
         '''
         # Menu element to select Intrepid class
         self.aside_intrepid = '''
-        <li><a href="?id=intrepid">Intrepid</a></li>
+        <li><a href="?id=4">Intrepid</a></li>
         '''
         # Menu element to close side bar
         self.aside_close = '''
